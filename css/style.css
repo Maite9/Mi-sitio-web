@@ -54,22 +54,21 @@ body{
 }
 h2{
     color: white;
-    background-color: #230044;
+    background-color: #23004454;
 }
 p{
     color: white;
-    background-color: #230044;
+    background-color: #23004454;
 }
-.main__carousel{
-    width: 50%;
-    justify-content: center;
+h5{
+    color: black;
+    background-color: #f3d1d7c2;
 }
-.main__carousel__act{
-    width: 70%;
-    
+.tamano{
+    width: 900px;
+    margin: 10px auto;
+    border: 5px #230044 solid;
 }
-
-
 .footer{
     background-color: #f3d1d7;
     padding:1.2rem;
@@ -90,7 +89,8 @@ p{
 .footer__wpp__boton{
     background-color: #230044;
 }
-
+ /* Media query*/
+ @
 
 
 
