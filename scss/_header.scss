@@ -1,0 +1,55 @@
+.header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    height: 70px;
+    background-color: $rosa;
+    padding: 1.5rem;
+    display: flex;
+    grid-area: header;
+    justify-content: space-around;
+    align-items: center;
+
+    .navbar {
+        div {
+            a {
+                .logo {
+                    width: 70px;
+                    border-radius: 20%;
+                }
+            }
+
+            div {
+                ul {
+                    li {
+                        background-color: #444242;
+                        border-radius: 10px;
+                        margin: 0 10px;
+
+                        a {
+                            color: $blanco;
+                            text-decoration: none;
+                            padding: 0.7rem;
+                            display: block;
+                            border-radius: 10px;
+
+                            &:hover {
+                                background-color: $blanco;
+                                color: black;
+                            }
+
+                            &:active {
+                                text-decoration: none;
+                                color: $rosa;
+                            }
+
+                            &:visited {
+                                color: $blanco;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

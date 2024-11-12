@@ -1,0 +1,36 @@
+.container {
+    div {
+        h2 {
+            color: $blanco;
+            background-color: $violeta-oscuro;
+        }
+    }
+
+    .tamano {
+        width: 900px;
+        margin: 10px auto;
+        border: 5px #230044 solid;
+
+        div {
+            div {
+                div {
+                    img {}
+                }
+
+                div {
+                    video {}
+                }
+            }
+
+            button {
+                span {}
+            }
+        }
+    }
+
+    p {
+        color: $blanco;
+        background-color: $violeta-oscuro;
+    }
+
+}
