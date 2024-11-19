@@ -3,7 +3,7 @@
     z-index: 1000;
     top: 0;
     height: 70px;
-    background-color: $rosa;
+    background: linear-gradient(to top, $rosa, $violeta-oscuro);
     padding: 1.5rem;
     display: flex;
     grid-area: header;
@@ -16,6 +16,10 @@
                 .logo {
                     width: 70px;
                     border-radius: 20%;
+                    transition: all 2s;
+                    &:hover{
+                        transform: scale(1.2, 1.2);
+                    }
                 }
             }
 
@@ -25,27 +29,22 @@
                         background-color: #444242;
                         border-radius: 10px;
                         margin: 0 10px;
+                        transition: all 1s;
 
+                        &:hover{
+                            background-color: black;
+                            transform: scale(1.2, 1.2);
+                        }
+                        &:active {
+                            text-decoration: none;
+                            background-color: $violeta-oscuro;
+                        }
                         a {
                             color: $blanco;
                             text-decoration: none;
                             padding: 0.7rem;
                             display: block;
                             border-radius: 10px;
-
-                            &:hover {
-                                background-color: $blanco;
-                                color: black;
-                            }
-
-                            &:active {
-                                text-decoration: none;
-                                color: $rosa;
-                            }
-
-                            &:visited {
-                                color: $blanco;
-                            }
                         }
                     }
                 }
@@ -53,3 +52,5 @@
         }
     }
 }
+
+

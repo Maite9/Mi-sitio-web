@@ -9,8 +9,17 @@
     div {
         .footer__wpp {
             position: fixed;
-            left: 95%;
+            left: 93%;
             top: 90%;
+            animation-name: gira;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            @keyframes gira{
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+
         }
         div {
             div {

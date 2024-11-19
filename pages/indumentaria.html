@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link a animate css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!--link a AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
@@ -45,7 +50,7 @@
         </nav>
     </header>
     <main>
-        <section class="contenedor__cards p-5">
+        <section class="contenedor__cards p-5" data-aos="zoom-out-down">
             <div class="row py-4">
                 <div class="col-12 col-sm-6 col-lg-3 m-3">
                     <!--primera card-->
@@ -172,7 +177,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <img class="footer__modal__logo" src="./img/logo fitness.jpg" alt="logo">
+                            <img class="footer__modal__logo" src="../img/logo fitness.jpg" alt="logo">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn footer__wpp__boton"><a href="https://web.whatsapp.com/"
@@ -190,6 +195,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script> AOS.init({ easing: 'ease-out-back', duration: 2000 });</script>
 </body>
 
 </html>

@@ -18,7 +18,7 @@ body {
   z-index: 1000;
   top: 0;
   height: 70px;
-  background-color: #f3d1d7;
+  background: linear-gradient(to top, #f3d1d7, rgba(35, 0, 68, 0.3294117647));
   padding: 1.5rem;
   display: flex;
   grid-area: header;
@@ -28,11 +28,24 @@ body {
 .header .navbar div a .logo {
   width: 70px;
   border-radius: 20%;
+  transition: all 2s;
+}
+.header .navbar div a .logo:hover {
+  transform: scale(1.2, 1.2);
 }
 .header .navbar div div ul li {
   background-color: #444242;
   border-radius: 10px;
   margin: 0 10px;
+  transition: all 1s;
+}
+.header .navbar div div ul li:hover {
+  background-color: black;
+  transform: scale(1.2, 1.2);
+}
+.header .navbar div div ul li:active {
+  text-decoration: none;
+  background-color: rgba(35, 0, 68, 0.3294117647);
 }
 .header .navbar div div ul li a {
   color: white;
@@ -41,24 +54,13 @@ body {
   display: block;
   border-radius: 10px;
 }
-.header .navbar div div ul li a:hover {
-  background-color: white;
-  color: black;
-}
-.header .navbar div div ul li a:active {
-  text-decoration: none;
-  color: #f3d1d7;
-}
-.header .navbar div div ul li a:visited {
-  color: white;
-}
 
 .container div h2 {
   color: white;
   background-color: rgba(35, 0, 68, 0.3294117647);
 }
 .container .tamano {
-  width: 900px;
+  width: 60%;
   margin: 10px auto;
   border: 5px #230044 solid;
 }
@@ -67,6 +69,18 @@ body {
   background-color: rgba(35, 0, 68, 0.3294117647);
 }
 
+@media (max-width: 768px) {
+  .tamano {
+    width: 40%;
+    margin: 5px auto;
+  }
+}
+@media (max-width: 480px) {
+  .tamano {
+    width: 20%;
+    margin: 3px auto;
+  }
+}
 .tamano h5 {
   color: black;
   background-color: #f3d1d7;
@@ -74,6 +88,12 @@ body {
 .tamano p {
   color: white;
   background-color: rgba(35, 0, 68, 0.3294117647);
+}
+
+.tamano {
+  width: 60%;
+  margin: 10px auto;
+  border: 5px #230044 solid;
 }
 
 .footer {
@@ -86,8 +106,16 @@ body {
 }
 .footer div .footer__wpp {
   position: fixed;
-  left: 95%;
+  left: 93%;
   top: 90%;
+  animation-name: gira;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes gira {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .footer div div div div div .footer__modal__logo {
   width: 100px;
@@ -97,13 +125,3 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-/*Animación*/
-.header_titulo{
-  opacity: 0;
-  animation: myAnimation 2s infinite;
-}
-@keyframes myAnimation {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
