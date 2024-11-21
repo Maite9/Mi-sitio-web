@@ -86,8 +86,13 @@ body {
   background-color: #f3d1d7;
 }
 .tamano .texto-carousel {
+  font-weight: bold;
   color: white;
   background-color: rgba(35, 0, 68, 0.3294117647);
+}
+
+.tamano .texto_acordion {
+  font-weight: bold;
 }
 
 .planes_nutricionales .titulo_nutricion_plan1 {
@@ -111,7 +116,11 @@ body {
   margin: 10px auto;
   border: 5px #230044 solid;
 }
-
+.tamano div .titulo_carousel_act, .tamano div .text_carousel_act {
+  color: white;
+  background-color: rgba(35, 0, 68, 0.3294117647);
+  font-weight: bold;
+}
 .footer {
   background-color: #f3d1d7;
   padding: 1.2rem;

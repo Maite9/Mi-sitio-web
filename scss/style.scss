@@ -2,6 +2,12 @@ $rosa: #f3d1d7;
 $blanco: white;
 $violeta-oscuro: #23004454;
 
+@mixin text-style($color, $bg-color, $padding){
+    padding: $padding;
+    color: $color;
+    background-color: $bg-color;
+}
+
 @import "encabezado";
 @import "header";
 @import "main_index";

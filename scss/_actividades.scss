@@ -1,7 +1,18 @@
-.tamano{
+.tamano {
     width: 60%;
     margin: 10px auto;
     border: 5px #230044 solid;
 
-}
+    div {
+        .titulo_carousel_act {
+            color: white;
+            background-color: $violeta-oscuro;
+            font-weight: bold
+        }
 
+        .text_carousel_act {
+            @extend .titulo_carousel_act;
+        }
+    }
+
+}

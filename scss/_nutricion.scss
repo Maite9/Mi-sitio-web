@@ -4,20 +4,19 @@
         background-color: $rosa;
     }
     .texto-carousel{
+        font-weight: bold;
         color: $blanco;
         background-color: $violeta-oscuro;
     }
 }
-@mixin text-style($color, $bg-color, $padding){
-    padding: $padding;
-    color: $color;
-    background-color: $bg-color;
+.tamano{
+    .texto_acordion{
+        font-weight: bold;
+    }
 }
-
 .planes_nutricionales{
     .titulo_nutricion_plan1{
         @include text-style(white, $violeta-oscuro, 10px)
-
     }
     .subtitulo_plan1{
         @include text-style(white, $violeta-oscuro, 5px)
