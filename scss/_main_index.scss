@@ -1,6 +1,6 @@
 .container {
     div {
-        h2 {
+        .header_titulo {
             color: $blanco;
             background-color: $violeta-oscuro;
         }
@@ -12,7 +12,7 @@
         border: 5px #230044 solid;
     }
 
-    p {
+    .texto_index{
         color: $blanco;
         background-color: $violeta-oscuro;
     }

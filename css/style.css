@@ -55,7 +55,7 @@ body {
   border-radius: 10px;
 }
 
-.container div h2 {
+.container div .header_titulo {
   color: white;
   background-color: rgba(35, 0, 68, 0.3294117647);
 }
@@ -64,7 +64,7 @@ body {
   margin: 10px auto;
   border: 5px #230044 solid;
 }
-.container p {
+.container .texto_index {
   color: white;
   background-color: rgba(35, 0, 68, 0.3294117647);
 }
@@ -81,11 +81,27 @@ body {
     margin: 3px auto;
   }
 }
-.tamano h5 {
+.tamano .titulo-carousel {
   color: black;
   background-color: #f3d1d7;
 }
-.tamano p {
+.tamano .texto-carousel {
+  color: white;
+  background-color: rgba(35, 0, 68, 0.3294117647);
+}
+
+.planes_nutricionales .titulo_nutricion_plan1 {
+  padding: 10px;
+  color: white;
+  background-color: rgba(35, 0, 68, 0.3294117647);
+}
+.planes_nutricionales .subtitulo_plan1 {
+  padding: 5px;
+  color: white;
+  background-color: rgba(35, 0, 68, 0.3294117647);
+}
+.planes_nutricionales ul .desayunos {
+  padding: 5px;
   color: white;
   background-color: rgba(35, 0, 68, 0.3294117647);
 }

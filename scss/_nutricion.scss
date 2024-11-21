@@ -1,10 +1,30 @@
 .tamano{
-    h5{
+    .titulo-carousel{
         color: black;
         background-color: $rosa;
     }
-    p{
+    .texto-carousel{
         color: $blanco;
         background-color: $violeta-oscuro;
+    }
+}
+@mixin text-style($color, $bg-color, $padding){
+    padding: $padding;
+    color: $color;
+    background-color: $bg-color;
+}
+
+.planes_nutricionales{
+    .titulo_nutricion_plan1{
+        @include text-style(white, $violeta-oscuro, 10px)
+
+    }
+    .subtitulo_plan1{
+        @include text-style(white, $violeta-oscuro, 5px)
+    }
+    ul{
+        .desayunos{
+            @include text-style(white, $violeta-oscuro, 5px)
+        }
     }
 }
