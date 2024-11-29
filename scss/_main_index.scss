@@ -9,12 +9,23 @@
     .tamano {
         width: 60%;
         margin: 10px auto;
-        border: 5px #230044 solid;
+        border: none;
     }
 
     .texto_index{
         color: $blanco;
         background-color: $violeta-oscuro;
+    }
+    .texto2_index{
+        color: $blanco;
+        background-color: #000000da;
+    }
+    .formulario__index{
+        color: $blanco;
+        background-color: #000000da;
+        .boton__formulario{
+            background-color: $violeta-oscuro;
+        }
     }
 
 }

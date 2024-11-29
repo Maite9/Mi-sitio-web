@@ -62,10 +62,21 @@ body {
 .container .tamano {
   width: 60%;
   margin: 10px auto;
-  border: 5px #230044 solid;
+  border: none;
 }
 .container .texto_index {
   color: white;
+  background-color: rgba(35, 0, 68, 0.3294117647);
+}
+.container .texto2_index {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8549019608);
+}
+.container .formulario__index {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8549019608);
+}
+.container .formulario__index .boton__formulario {
   background-color: rgba(35, 0, 68, 0.3294117647);
 }
 
@@ -142,11 +153,21 @@ body {
     transform: rotate(360deg);
   }
 }
-.footer div div div div div .footer__modal__logo {
+.footer div div div div .footer_modal .footer__modal__logo {
   width: 100px;
 }
 .footer div div div div div .footer__wpp__boton {
   background-color: rgba(35, 0, 68, 0.3294117647);
+}
+.footer div div div div div .footer__wpp__boton .texto_boton_wpp {
+  color: black;
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .footer__wpp {
+    position: initial;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
