@@ -5,12 +5,17 @@
             background-color: $violeta-oscuro;
         }
     }
-
-    .tamano {
-        width: 60%;
-        margin: 10px auto;
-        border: none;
+    .contenedor_video{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .index_video{
+            width: 70%;
+            height: auto;
+        }
     }
+
+
 
     .texto_index{
         color: $blanco;
@@ -28,16 +33,4 @@
         }
     }
 
-}
-@media (max-width:768px){
-    .tamano{
-        width: 40%;
-        margin: 5px auto;
-    }
-}
-@media (max-width:480px){
-    .tamano{
-        width: 20%;
-        margin: 3px auto;
-    }
 }
