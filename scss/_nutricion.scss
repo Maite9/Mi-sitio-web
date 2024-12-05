@@ -1,3 +1,14 @@
+.titulo_nutricion{
+    background-color: #00000086;
+    padding: 10px;
+    color: $blanco;
+}
+.texto_nutricion{
+    background-color: #00000086;
+    padding: 10px;
+    color: $blanco;
+}
+
 .tamano{
     .titulo-carousel{
         color: black;
@@ -10,20 +21,57 @@
     }
 }
 .tamano{
+    .acordion_nutricion{
+        
+    }
     .texto_acordion{
         font-weight: bold;
     }
 }
 .planes_nutricionales{
     .titulo_nutricion_plan1{
-        @include text-style(white, $violeta-oscuro, 10px)
+        @include text-style($blanco, #00000086, 10px);
     }
     .subtitulo_plan1{
-        @include text-style(white, $violeta-oscuro, 5px)
+        @include text-style($blanco, #00000086, 5px);
     }
-    ul{
+    .lista_desayunos{
         .desayunos{
-            @include text-style(white, $violeta-oscuro, 5px)
+            @include text-style($blanco, #00000086, 5px);
         }
     }
+    .lista_almuerzos{
+        .almuerzos{
+            @include text-style($blanco, #00000086, 5px);
+        }
+    }
+    .wpp_dieta{
+        .subtitulo_plan1{
+            @include text-style($blanco, #00000086, 5px);
+        }
+        .link_wpp_dietas{
+            color: $blanco;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-size: 1.5rem;
+            animation: pulse 1.5s infinite;
+            @keyframes pulse {
+                0% {
+                    transform: scale(1);
+                    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+                }
+                50% {
+                    transform: scale(1.05);
+                    box-shadow: 0 0 20px rgba(76, 175, 80, 0.7);
+                }
+                100% {
+                    transform: scale(1);
+                    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+                }
+            }
+        }
+
+    }
+
+    
 }

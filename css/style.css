@@ -84,6 +84,18 @@ body {
   background-color: rgba(35, 0, 68, 0.3294117647);
 }
 
+.titulo_nutricion {
+  background-color: rgba(0, 0, 0, 0.5254901961);
+  padding: 10px;
+  color: white;
+}
+
+.texto_nutricion {
+  background-color: rgba(0, 0, 0, 0.5254901961);
+  padding: 10px;
+  color: white;
+}
+
 .tamano .titulo-carousel {
   color: black;
   background-color: #f3d1d7;
@@ -101,17 +113,48 @@ body {
 .planes_nutricionales .titulo_nutricion_plan1 {
   padding: 10px;
   color: white;
-  background-color: rgba(35, 0, 68, 0.3294117647);
+  background-color: rgba(0, 0, 0, 0.5254901961);
 }
 .planes_nutricionales .subtitulo_plan1 {
   padding: 5px;
   color: white;
-  background-color: rgba(35, 0, 68, 0.3294117647);
+  background-color: rgba(0, 0, 0, 0.5254901961);
 }
-.planes_nutricionales ul .desayunos {
+.planes_nutricionales .lista_desayunos .desayunos {
   padding: 5px;
   color: white;
-  background-color: rgba(35, 0, 68, 0.3294117647);
+  background-color: rgba(0, 0, 0, 0.5254901961);
+}
+.planes_nutricionales .lista_almuerzos .almuerzos {
+  padding: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5254901961);
+}
+.planes_nutricionales .wpp_dieta .subtitulo_plan1 {
+  padding: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5254901961);
+}
+.planes_nutricionales .wpp_dieta .link_wpp_dietas {
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+  }
 }
 
 main .promocion_act {
@@ -153,7 +196,7 @@ main .tamano div .titulo_carousel_act, main .tamano div .text_carousel_act {
   grid-area: footer;
   text-align: center;
 }
-.footer div .footer__wpp {
+.footer div .footer__wpp__boton {
   position: fixed;
   left: 93%;
   top: 90%;
@@ -166,38 +209,38 @@ main .tamano div .titulo_carousel_act, main .tamano div .text_carousel_act {
     transform: rotate(360deg);
   }
 }
-.footer div div div .footer__wpp__boton {
+.footer div div div .footer__modal__boton {
   background-color: rgba(35, 0, 68, 0.3294117647);
   transition: all 1s;
 }
-.footer div div div .footer__wpp__boton:hover {
+.footer div div div .footer__modal__boton:hover {
   background-color: black;
   transform: scale(1.2, 1.2);
 }
-.footer div div div .footer__wpp__boton:active {
+.footer div div div .footer__modal__boton:active {
   text-decoration: none;
   background-color: #f3d1d7;
 }
-.footer div div div .footer__wpp__boton .texto_boton_wpp {
+.footer div div div .footer__modal__boton .texto_boton_wpp {
   color: black;
   text-decoration: none;
   transition: all 1s;
 }
-.footer div div div .footer__wpp__boton .texto_boton_wpp:hover {
+.footer div div div .footer__modal__boton .texto_boton_wpp:hover {
   color: white;
 }
-.footer div div div .footer__wpp__boton .texto_boton_wpp:active {
+.footer div div div .footer__modal__boton .texto_boton_wpp:active {
   color: black;
 }
 
 @media (max-width: 768px) {
-  .footer__wpp {
-    left: 50%;
+  .footer div .footer__wpp__boton {
+    left: 85%;
   }
 }
-@media (max-widht: 480px) {
-  .footer__wpp {
-    left: 50%;
+@media (max-width: 480px) {
+  .footer div .footer__wpp__boton {
+    left: 80%;
   }
 }
 

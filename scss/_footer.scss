@@ -7,7 +7,7 @@
     text-align: center;
 
     div {
-        .footer__wpp {
+        .footer__wpp__boton {
             position: fixed;
             left: 93%;
             top: 90%;
@@ -25,7 +25,7 @@
 
         div {
             div {
-                .footer__wpp__boton {
+                .footer__modal__boton {
                     background-color: $violeta-oscuro;
                     transition: all 1s;
 
@@ -58,15 +58,21 @@
         }
     }
 }
-
-@media (max-width: 768px) {
-    .footer__wpp {
-        left: 50%;
+@media (max-width:768px) {
+    .footer{
+        div{
+            .footer__wpp__boton{
+                left: 85%;
+            }
+        }
     }
 }
-@media (max-widht:480px){
-    .footer__wpp{
-        
-        left: 50%;
+@media (max-width:480px) {
+    .footer{
+        div{
+            .footer__wpp__boton{
+                left: 80%;
+            }
+        }
     }
 }
