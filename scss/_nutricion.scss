@@ -47,7 +47,7 @@
     }
     .wpp_dieta{
         .subtitulo_plan1{
-            @include text-style($blanco, #00000086, 5px);
+            @include text-style($blanco, #00000086, 10px);
         }
         .link_wpp_dietas{
             color: $blanco;
