@@ -4,6 +4,62 @@
   box-sizing: border-box;
 }
 
+.body_404 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  background-image: none;
+  display: grid;
+  grid-template-rows: 0.5fr 3fr 0.5fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+}
+.body_404 .main_404 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.body_404 .main_404 .img_404 {
+  width: 40%;
+  height: auto;
+}
+.body_404 .main_404 .h1_404 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+.body_404 .main_404 .texto_404 {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  padding: 10px;
+  margin: 10px;
+}
+.body_404 .main_404 .logo {
+  width: 200px;
+}
+.body_404 .main_404 .links_404 {
+  color: black;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .body_404 .main_404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: white;
