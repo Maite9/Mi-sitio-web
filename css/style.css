@@ -114,30 +114,36 @@ body {
   padding: 10px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5254901961);
+  margin: 5px;
 }
 .planes_nutricionales .subtitulo_plan1 {
   padding: 5px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5254901961);
+  margin: 5px;
 }
 .planes_nutricionales .lista_desayunos .desayunos {
   padding: 5px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5254901961);
+  margin: 5px;
 }
 .planes_nutricionales .lista_almuerzos .almuerzos {
   padding: 5px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5254901961);
+  margin: 5px;
 }
 .planes_nutricionales .wpp_dieta .subtitulo_plan1 {
   padding: 10px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5254901961);
+  margin: 5px;
 }
 .planes_nutricionales .wpp_dieta .link_wpp_dietas {
   color: white;
-  padding: 1rem 2rem;
+  padding: 10px;
+  margin: 20px;
   border-radius: 4px;
   font-size: 1.5rem;
   animation: pulse 1.5s infinite;
@@ -145,18 +151,28 @@ body {
 @keyframes pulse {
   0% {
     transform: scale(1);
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5019607843);
   }
   50% {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(76, 175, 80, 0.7);
+    box-shadow: 0 0 20px rgba(76, 174, 79, 0.7019607843);
   }
   100% {
     transform: scale(1);
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5019607843);
   }
 }
 
+@media (max-width: 768px) {
+  .planes_nutricionales .wpp_dieta .link_wpp_dietas {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .planes_nutricionales .wpp_dieta .link_wpp_dietas {
+    font-size: 0.5rem;
+  }
+}
 main .promocion_act {
   background-color: rgba(0, 0, 0, 0.5254901961);
   padding: 10px;
