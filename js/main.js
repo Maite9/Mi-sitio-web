@@ -49,32 +49,29 @@ const productos = [
 
 ];
 
-// carrito desde localStorage o vacío
+// carrito 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 // mostrar productos en la página
-document.addEventListener("DOMContentLoaded", () => {
-    const contenedorProductos = document.querySelector(".contenedor__cards .row");
-    productos.forEach(producto => {
-        console.log(producto);
-        const div = document.createElement("div");
-        div.innerHTML = `
-            <h3>${producto.nombre}</h3>
-            <p>Precio: $${producto.precio}</p>
-            <button class="botonCarrito" data-id="${producto.id}">Agregar al Carrito</button>
-        `;
-        contenedorProductos.appendChild(div);
-    });
+const contenedorProductos = document.querySelector(".contenedor__cards .row");
+productos.forEach(producto => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+        <h3>${producto.nombre}</h3>
+        <p>Precio: $${producto.precio}</p>
+        <button class="botonCarrito" data-id="${producto.id}">Agregar al Carrito</button>
+    `;
+    contenedorProductos.appendChild(div);
+});
 
-    document.querySelectorAll(".botonCarrito").forEach(boton => {
-        boton.addEventListener("click", (e) => {
-            const id = parseInt(e.target.dataset.id);
-            agregarAlCarrito(id);
-        });
+document.querySelectorAll(".botonCarrito").forEach(boton => {
+    boton.addEventListener("click", (e) => {
+        const id = parseInt(e.target.dataset.id);
+        agregarAlCarrito(id);
     });
 });
 
-// agregar productos al carrito
+// función para agregar productos al carrito
 function agregarAlCarrito(id) {
     const producto = productos.find(prod => prod.id === id);
     carrito.push(producto);
