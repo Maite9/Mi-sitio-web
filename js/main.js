@@ -49,12 +49,13 @@ const productos = [
 
 ];
 
-// carrito 
+// carrito desde localStorage o vacío
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 // mostrar productos en la página
 const contenedorProductos = document.querySelector(".contenedor__cards .row");
 productos.forEach(producto => {
+    console.log (producto);
     const div = document.createElement("div");
     div.innerHTML = `
         <h3>${producto.nombre}</h3>
@@ -80,9 +81,10 @@ function agregarAlCarrito(id) {
 }
 
 //formulario
-document.getElementById("formulario").addEventListener("submit", (e) => {
+const formulario = document.getElementById(formulario);
+formulario.addEventListener('submit', (e) => {
     e.preventDefault();
     const email = document.getElementById("exampleInputEmail1").value;
-    alert(`Gracias. Te contactaremos a ${email}`);
+    alert('Gracias. Te contactaremos a ${email} ');
     document.getElementById('exampleInputEmail1').value = '';
-});
+})
