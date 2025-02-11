@@ -1,25 +1,5 @@
 
-
-
-const formulario = document.getElementById("formulario")
-
-formulario.addEventListener('submit', (e) => {
-
-    e.preventDefault()
-
-    const email = document.getElementById("exampleInputEmail1").value
-
-    console.log("email: " + email)
-
-
-    alert('Gracias. Tu formulario fue enviado.')
-})
-
-
-
-
-
-/*
+//productos
 const productos = [
     {
         id: 1,
@@ -68,84 +48,44 @@ const productos = [
     },
 
 ];
-*/
-/*
-function mostrarProductos() {
-    console.log("Bienvenido a Mariana Santana Fitness. ¡Estos son los productos disponibles!")
-    productos.forEach(producto => console.log(producto))
-};
 
-mostrarProductos()
-*/
-/*
-const productosJSON = JSON.stringify(productos)
+// carrito desde localStorage o vacío
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-localStorage.setItem("productos", productosJSON)
-
-
-const MostrarProductos = () => {
-
+// mostrar productos en la página
+document.addEventListener("DOMContentLoaded", () => {
+    const contenedorProductos = document.querySelector(".contenedor__cards .row");
     productos.forEach(producto => {
+        console.log(producto);
+        const div = document.createElement("div");
+        div.innerHTML = `
+            <h3>${producto.nombre}</h3>
+            <p>Precio: $${producto.precio}</p>
+            <button class="botonCarrito" data-id="${producto.id}">Agregar al Carrito</button>
+        `;
+        contenedorProductos.appendChild(div);
+    });
 
-        let carta = document.createElement('p')
-        carta.innerHTML = 'el producto es ${producto.nombre} y su precio es $${producto.precio} '
+    document.querySelectorAll(".botonCarrito").forEach(boton => {
+        boton.addEventListener("click", (e) => {
+            const id = parseInt(e.target.dataset.id);
+            agregarAlCarrito(id);
+        });
+    });
+});
 
-
-        const boton = document.createElement('button')
-        boton.textContent = "Agregar al Carrito"
-
-        boton.addEventListener('click', () => AgregarCompraCarrito(producto))
-
-        carta.appendChild(boton)
-
-
-
-
-    })
-
-
-
-
+// agregar productos al carrito
+function agregarAlCarrito(id) {
+    const producto = productos.find(prod => prod.id === id);
+    carrito.push(producto);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    alert(`${producto.nombre} agregado al carrito!`);
 }
 
-
-const AgregarCompraCarrito = producto => {
-
-
-}
-
-
-*/
-
-
-
-
- 
-
-
-
-
-
-//Funcion Constructora
-/*
-function Producto (nombre, precio) {
-    this.nombre = nombre;
-    this.precio = precio;
-
-    this.mostrarInfo = function(){
-        console.log(' ${this.nombre} cuesta $${this.precio} ')
-    };
-}
-
-const producto1 = new Producto("Biker deportiva", 31000);
-const producto2 = new Producto("Biker deportiva", 30000);
-const producto3 = new Producto("Calza deportiva", 50000);
-const producto4 = new Producto("Conjunto deportivo", 80000);
-const producto5 = new Producto("Remera deportiva", 12000);
-const producto6 = new Producto("Calza deportiva", 60000);
-const producto7 = new Producto("Top deportivo", 30000);
-const producto8 = new Producto("Top deportivo", 32000);
-const producto9 = new Producto("Top deportivo", 39000);
-
-
-*/
+//formulario
+document.getElementById("formulario").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = document.getElementById("exampleInputEmail1").value;
+    alert(`Gracias. Te contactaremos a ${email}`);
+    document.getElementById('exampleInputEmail1').value = '';
+});
